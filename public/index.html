@@ -6,10 +6,13 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700,700i&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -19,11 +22,49 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav class="container">
+      <span class="logo">tweeter</span>
+      <span class="new-tweet"><b>Write</b> a new tweet</span>
     </nav>
+    
+    <header>
+    <div>
+        <img src="/images/profile-hex.png"> 
+    </div>
+    <br>
+    <div>
+        <h2>Your Name</h2>
+    </div>
+    </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main>
+        <section class="new-tweet container">
+            <form method="POST" action="/tweets/">
+              <textarea name="text" placeholder="What are you humming about?"></textarea>
+              <div class="container">
+              <input type="submit" value="Tweet">
+              <span class="counter">140</span>
+              </div>
+            </form>
+          </section>
+      <p>Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other 
+        websites. Lorem Ipsum best not make any more threats to your website. It will be met with 
+        fire and fury like the world has never seen. Does everybody know that pig named Lorem Ipsum? 
+        An ‘extremely credible source’ has called my office and told me that Barack Obama’s 
+        placeholder text is a fraud.</p>
+
+        <p>Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other 
+            websites. Lorem Ipsum best not make any more threats to your website. It will be met with 
+            fire and fury like the world has never seen. Does everybody know that pig named Lorem Ipsum? 
+            An ‘extremely credible source’ has called my office and told me that Barack Obama’s 
+            placeholder text is a fraud.</p>
+
+            <p>Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other 
+                websites. Lorem Ipsum best not make any more threats to your website. It will be met with 
+                fire and fury like the world has never seen. Does everybody know that pig named Lorem Ipsum? 
+                An ‘extremely credible source’ has called my office and told me that Barack Obama’s 
+                placeholder text is a fraud.</p>
+    </main>
   </body>
 </html>
