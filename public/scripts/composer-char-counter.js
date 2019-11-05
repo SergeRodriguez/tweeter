@@ -5,14 +5,16 @@
 $("document").ready(function () {
 
   $("textarea").on("keyup", function (event) {
+    
     let count = 140 - ($(this).val()).length
-  
-    $(".counter").text(count)
+    $(this).parent().find(".counter").text(count)
+
     if (count < 0) {
-      $(".counter").addClass("redCounter")
+      $(this).parent().find(".counter").addClass("redCounter")
     } else {
-      $(".counter").removeClass("redCounter")
+      $(this).parent().find(".counter").removeClass("redCounter")
     }
+    
   })
 
 })
