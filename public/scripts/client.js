@@ -1,5 +1,4 @@
-var moment = require('moment');
-moment().format();
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -32,6 +31,8 @@ const data = [
     "created_at": 1461113959088
   }
 ]
+let date = moment(data[0].created_at).toNow()
+console.log(date)
 
 const createTweetElement = function (tweet) {
   const markup = `
@@ -46,7 +47,7 @@ const createTweetElement = function (tweet) {
   <main>${tweet.content.text}</main>
   <footer>
     <div class="container">
-      ${tweet.created_at}
+      ${moment(tweet.created_at).fromNow()}
       <span>
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
